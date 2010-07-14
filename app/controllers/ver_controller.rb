@@ -3,7 +3,9 @@ class VerController < ApplicationController
   before_filter :load_roots
 	
   def index
-    redirect_to :action => :pagina, :id => 8
+    @page = Page.find(8)
+    @area = area_of @page
+    render :action => 'pagina'
   end
 
   def buscar

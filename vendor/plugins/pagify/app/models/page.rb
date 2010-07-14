@@ -67,10 +67,15 @@ class Page < ActiveRecord::Base
   def skip_first_line
     self.content.nil? ? '' : self.content[first_line.length...self.content.length]
   end
-   	
+
+  def to_param
+    title ? "#{id}-#{title.parameterize}" : id.to_s
+  end
+
+
   private
   def calculate_depth
     self.depth = ancestors.size
   end
- 	
+
 end
