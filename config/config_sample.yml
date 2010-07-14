@@ -1,0 +1,16 @@
+development:
+    files_path: public/files/development
+    root: si/ver
+    edit: si/cambiar
+    user:
+        name: solidaridad
+        pass: solidaridad
+
+production:
+    files_path: public/files/development
+    root: si/ver
+    edit: si/cambiar
+    user:
+        name: solidaridad
+        pass: solidaridad
+

@@ -1,0 +1,19 @@
+defaults: &defaults
+    name: apy
+    files_path: public/files/development/apy
+    root: apy/ver
+    edit: admin/pages
+    user:
+        name: apyweb
+        pass: apyweb
+    admin:
+      name: admin
+      pass: calc
+
+development:
+  <<: *defaults
+
+production:
+  <<: *defaults
+
+
