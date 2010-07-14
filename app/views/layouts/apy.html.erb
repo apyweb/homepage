@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Apy &mdash; <%=  @page.title if !@page.nil? -%></title>
+    <link rel="icon" href="/apyweb.ico" type="image/x-icon" />
+    <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' -%>
+    <%= stylesheet_link_tag 'apy.css' -%>
+    <%= yield :header -%>
+  </head>
+  <body>
+    <div id="page" style="border-bottom: 1em solid <%= color_of @area -%>;background-color: <%= color_of @area -%>;">
+
+      <!-- areas -->
+      <div id="areas">
+        <div class="area" style="background-color: #24419B;">
+          <a href="/8" style="margin-top: 0; " class="selected">
+          <img alt="Apy" src="/images/logo.gif" /></a>
+        </div>
+        <% @roots.each do |page| -%>
+          <% display = page.title == 'APY' ? image_tag('apy/logo.gif') : page.title -%>
+          <div class="area" style="background-color: <%= color_of page -%>;">
+            <%= link_to display, {:action => 'pagina', :id => page}, :class => (page == @area ? 'selected' : '') -%>
+          </div>
+        <% end -%>
+        <div class="search_area"><label>buscar</label><% form_tag({:action => 'buscar'}, :method => :get) do -%>
+            <%= text_field_tag :t -%><% end -%>
+        </div>
+      </div>
+      <div id="line" style="background-color: <%= color_of @area -%>;">&nbsp;</div>
+
+
+      <!-- content -->
+      <div id="main" >
+        <!-- menu -->
+        <div id="menu" style="">
+          <%= render :partial => '/layouts/menu_items', :locals => {:root => @area} -%>
+        </div>
+        <div id="content-wrapper">
+          <div id="content" >
+            <%= yield  -%>
+          </div>
+        </div>
+      </div>
+
+      <%= clear -%>
+    </div>
+    <%= render :partial => '/layouts/ga_apy' %>
+  </body>
+</html>
