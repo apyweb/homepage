@@ -34,6 +34,11 @@ class Page < ActiveRecord::Base
   has_many :rev_children, :class_name => 'Page', :foreign_key => 'parent_id', :order => "position DESC", :dependent => :destroy
 
 
+  def to_param
+    title ? "#{id}-#{title.parameterize}" : id.to_s
+  end
+  
+
   def self.children_of(id)
     Page.find_all_by_parent_id(id)
   end
@@ -67,15 +72,10 @@ class Page < ActiveRecord::Base
   def skip_first_line
     self.content.nil? ? '' : self.content[first_line.length...self.content.length]
   end
-
-  def to_param
-    title ? "#{id}-#{title.parameterize}" : id.to_s
-  end
-
-
+   	
   private
   def calculate_depth
     self.depth = ancestors.size
   end
-
+ 	
 end

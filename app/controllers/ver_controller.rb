@@ -1,7 +1,8 @@
 class VerController < ApplicationController
   layout 'apy'
   before_filter :load_roots
-	
+
+
   def index
     @page = Page.find(8)
     @area = area_of @page
