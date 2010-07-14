@@ -2,6 +2,7 @@ class VerController < ApplicationController
   layout 'apy'
   before_filter :load_roots
 
+  caches_page :index, :pagina
 
   def index
     @page = Page.find(8)
