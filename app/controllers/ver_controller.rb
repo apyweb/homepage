@@ -28,7 +28,7 @@ class VerController < ApplicationController
 	
   private
   def load_roots
-    @roots = Page.find_all_by_parent_id(1, :conditions => ["id != ?", 2])
+    @roots = Page.find_all_by_parent_id(1, :conditions => ["id != ? AND id != ?", 2, 160])
   end
 
   def area_of(page)

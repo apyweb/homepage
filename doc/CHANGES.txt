@@ -1,0 +1,21 @@
+
+* Esto incluye, el modificar la página de entrada, crear una sección específica de noticias y de novedades.
+* También una pequeña optimización de la página (para que se cargue algo más rápido)
+* solventar algunos detalles
+* la posibilidad de meter archivos flash (que ahora mismo no se puede)
+
+     Concretamente he creado unas páginas, las cuales ahora me dan como
+no accesibles y no puedo ni editarlas ni borrarlas, ni siquiera abrirlas, a
+ver si me puedes decir que es lo que pasa para que no me vuelva a pasar. Las
+páginas son: en la página 'CONVENIOS DE COLABORACIÓN' había creado una
+página hija llamada Convenio con UCA/UCE, que funcionaba, pero que ahora no
+puedo acceder a ella. Quise volver a hacerla, la creé, pero la nueva tampoco
+me deja ni entrar para introducir información, ni borrarla.
+
+       Lo mismo me ocurre con la página 'ANDALUCIA EN EL CUMPLIMIENTO DE
+LOS ODM' que es una página hija de la página 'EDUCACIÓN PARA EL DESARROLLO',
+que me ha permitido crearla, pero después me dice que no existe y que  no
+puedo ni editarla ni borrarla.
+
+No sé si estos problemas se resolverán con la nueva optimización de la
+página. Ya me comentas.
