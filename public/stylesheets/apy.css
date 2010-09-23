@@ -45,7 +45,7 @@ a {text-decoration: none; color: inherit;}
 #areas .search_area input {border: 0; width: 9em; margin: 0; padding: 0.2em;}
 
 /*** MENU ***/
-#menu { float: left; width: 9em; padding: 4em 0 30em 1em; margin: 0 0 -30em 0; }
+#menu { float: left; width: 9em; padding: 4em 0 300em 1em; margin: 0 0 -300em 0; }
 #menu ul {margin: 0; border: 0; padding: 0.5em 0 2em 0; 
     list-style: none; width: 100%;}
 #menu ul.depth-3 {padding: 0 1em 1em 0; margin-left: 1em; width: 8em;}
@@ -60,7 +60,9 @@ a {text-decoration: none; color: inherit;}
 #menu ul li a.depth-4 {font-size: 80%; margin: 9px 0 0 0;}
 #menu ul li a:hover { background-color: white; color: black;}
 
-#content-wrapper {margin: 0em 1em -30em 10em; padding: 2em 3em 32em 3em;
+#main {border: 1px solid black; }
+
+#content-wrapper {margin: 0em 1em -300em 10em; padding: 2em 3em 302em 3em;
   background-color: white; }
 #content { text-align: justify; width: 42em; margin: 2em auto;}
 #content h1, h2, h3 {color: #24419B; margin: 0 0 1em 0; text-align: left; }
