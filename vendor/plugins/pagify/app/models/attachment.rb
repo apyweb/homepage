@@ -24,7 +24,11 @@ class Attachment < ActiveRecord::Base
   belongs_to :page
   
   def image?
-    content_type == 'image/gif' || content_type == 'image/jpeg' || content_type == 'image/png'
+    content_type == 'image/gif' || content_type == 'image/jpeg' || content_type == 'image/png' #|| content_type == 'image/pjpeg'
+  end
+
+  def flash?
+    content_type == 'application/x-shockwave-flash'
   end
   
   def pdf?

@@ -4,7 +4,12 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Apy &mdash; <%=  @page.title if !@page.nil? -%></title>
     <link rel="icon" href="/apyweb.ico" type="image/x-icon" />
-    <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' -%>
+    <% if RAILS_ENV == 'production' %>
+      <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' -%>
+    <% else %>
+      <%= javascript_include_tag 'jquery.min.js' %>
+    <% end %>
+    <%= javascript_include_tag 'jquery.flash.js', 'apy.js' %>
     <%= stylesheet_link_tag 'apy.css' -%>
     <%= yield :header -%>
   </head>
@@ -15,7 +20,7 @@
       <div id="areas">
         <div class="area" style="background-color: #24419B;">
           <a href="/" style="margin-top: 0; " class="selected">
-          <img alt="Apy" src="/images/logo.gif" /></a>
+            <img alt="Apy" src="/images/logo.gif" /></a>
         </div>
         <% @roots.each do |page| -%>
           <% display = page.title == 'APY' ? image_tag('apy/logo.gif') : page.title -%>
