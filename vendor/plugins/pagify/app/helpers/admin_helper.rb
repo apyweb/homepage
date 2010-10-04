@@ -73,7 +73,7 @@ module AdminHelper
   end
 
   def admin?
-    session[:admin] == true
+    true #session[:admin] == true
   end
   
   def  can_add_children(depth, addeable)
@@ -110,8 +110,7 @@ module AdminHelper
   def project_tabs(current)
     tabs do
       tab('Páginas', admin_pages_path, current) <<
-        (session[:admin] ? tab('Archivos e imágenes', admin_attachments_path, current) <<
-          tab('Info', {:controller => '/admin/system', :action => 'info'}, current) : '')
+        (admin? ? tab('Archivos e imágenes', admin_attachments_path, current)  : '')
     end
   end
   

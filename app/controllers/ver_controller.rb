@@ -6,8 +6,9 @@ class VerController < ApplicationController
 
   def index
     @page = Page.find(8)
+    @noticias = Page.find(:all, :conditions => {:parent_id => 163}, :limit => 6, :order => 'position DESC')
     @area = area_of @page
-    render :action => 'pagina'
+    render :action => 'noticias'
   end
 
   def buscar
