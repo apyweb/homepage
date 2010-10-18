@@ -13,7 +13,7 @@ set :user, "deploy"
 set :use_sudo, false
 
 set :scm, "git"
-set :repository,  'git://github.com/danigb/apyweb.git'
+set :repository,  'git://github.com/apyweb/homepage.git'
 set :branch, "master"
 set :deploy_via, :remote_cache
 set :scm_verbose, true
