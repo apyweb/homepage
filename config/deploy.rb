@@ -34,7 +34,7 @@ namespace :config do
     %w[database.yml pagify.yml].each do |f|
       run "ln -nsf #{shared_path}/config/#{f} #{release_path}/config/#{f}"
     end
-    run "ln -sf #{shared_path}/files #{release_path}/public/files"
+    run "ln -sf #{shared_path}/files #{release_path}/public/"
   end
 end
 
