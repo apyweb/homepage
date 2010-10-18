@@ -31,7 +31,7 @@ buscar: #CDCDCF
 body { background-color: white; text-align: center; background-color: #efefef;}
 a {text-decoration: none; color: inherit;}
 #page { width: 70em;margin: 2em auto;text-align: left;background-color: white;
-  overflow: hidden;}
+        overflow: hidden;}
 
 
 #line { width: 80em; height: 1em;  clear: both; background-color: #CDCDCF;}
@@ -47,7 +47,7 @@ a {text-decoration: none; color: inherit;}
 /*** MENU ***/
 #menu { float: left; width: 9em; padding: 4em 0 300em 1em; margin: 0 0 -300em 0; }
 #menu ul {margin: 0; border: 0; padding: 0.5em 0 2em 0; 
-    list-style: none; width: 100%;}
+          list-style: none; width: 100%;}
 #menu ul.depth-3 {padding: 0 1em 1em 0; margin-left: 1em; width: 8em;}
 /* filter: alpha(opacity=80); -moz-opacity:.80;  opacity:.80; */
 #menu ul li { margin: 0; border: 0; color: white;}
@@ -63,7 +63,7 @@ a {text-decoration: none; color: inherit;}
 #main {border: 1px solid black; }
 
 #content-wrapper {margin: 0em 1em -300em 10em; padding: 2em 3em 302em 3em;
-  background-color: white; }
+                  background-color: white; }
 #content { text-align: justify; width: 42em; margin: 2em auto;}
 #content h1, h2, h3 {color: #24419B; margin: 0 0 1em 0; text-align: left; }
 #content h1 {font-family: serif; font-size: 250%; }
@@ -80,3 +80,14 @@ a {text-decoration: none; color: inherit;}
 .search_result .odd { background-color: #efefef;}
 
 .flash {display: block; display: none; margin: 1em auto;}
+
+#noticias {width: 100%; overflow: hidden;}
+#noticias .noticia {display: block; float: left; width: 45%; margin-right: 5%; margin-bottom: 2em;}
+#noticias .image_stub {width: 100%; background-color: gray; color: white; text-align: center; height: 150px; margin-bottom: 10px;}
+
+#news {
+    background-color: #919CFE; color: black; margin-left: 10em; width: 739px; padding: 1em 1em;
+    border-left: 0px solid gray; border-top: 1px solid gray;
+}
+#news h3 {font-size: 125%; font-weight: bold; margin: 0;}
+#news .image_stub {width: 80px; height: 70px; background-color: gray; color: white; text-align: center; float: left; margin-right: 1em;}

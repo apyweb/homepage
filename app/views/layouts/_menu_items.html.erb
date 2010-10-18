@@ -2,9 +2,9 @@
   <% for page in root.children -%>
     <% selected = @page == page ? 'selected' : '' -%>
     <li>
-      <% if page.state == 'locked' %>
+      <% if page.state == 'locked' -%>
         <div class="locked"><%= page.title %></div>
-      <% else %>
+      <% else -%>
         <%= link_to( page.title, {:action => :pagina, :id => page}, :class => "depth-#{page.depth} #{selected}") -%>
       <% end  %>
     </li>

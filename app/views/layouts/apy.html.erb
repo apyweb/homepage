@@ -23,12 +23,12 @@
             <img alt="Apy" src="/images/logo.gif" /></a>
         </div>
         <% @roots.each do |page| -%>
-          <% if page.mime != 'noticias' %>
+          <% if page.mime != 'noticias' -%>
             <% display = page.title == 'APY' ? image_tag('apy/logo.gif') : page.title -%>
             <div class="area" style="background-color: <%= color_of page -%>;">
               <%= link_to display, {:action => 'pagina', :id => page}, :class => (page == @area ? 'selected' : '') -%>
             </div>
-          <% end %>
+          <% end -%>
         <% end -%>
         <div class="search_area"><label>buscar</label><% form_tag({:action => 'buscar'}, :method => :get) do -%>
             <%= text_field_tag :t -%><% end -%>

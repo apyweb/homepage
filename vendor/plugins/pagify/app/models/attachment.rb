@@ -24,7 +24,7 @@ class Attachment < ActiveRecord::Base
   belongs_to :page
   
   def image?
-    content_type == 'image/gif' || content_type == 'image/jpeg' || content_type == 'image/png' #|| content_type == 'image/pjpeg'
+    content_type == 'image/gif' || content_type == 'image/jpeg' || content_type == 'image/png'  || content_type == 'image/pjpeg'
   end
 
   def flash?
@@ -33,6 +33,14 @@ class Attachment < ActiveRecord::Base
   
   def pdf?
     content_type == 'application/pdf'
+  end
+
+  def regenerate_thumbnails!
+    self.thumbnails.each {|thumb| thumb.destroy}
+    temp_file = create_temp_file
+    attachment_options[:thumbnails].each do |suffix, size|
+      self.create_or_update_thumbnail(temp_file, suffix, *size)
+    end
   end
 end
 
