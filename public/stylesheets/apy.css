@@ -81,8 +81,8 @@ a {text-decoration: none; color: inherit;}
 
 .flash {display: block; display: none; margin: 1em auto;}
 
-#noticias {width: 100%; overflow: hidden;}
-#noticias .noticia {display: block; float: left; width: 45%; margin-right: 5%; margin-bottom: 2em;}
+#noticias {width: 100%; overflow: hidden; }
+#noticias .noticia {display: block; float: left; width: 45%; margin-right: 5%; margin-bottom: 2em; overflow: hidden;}
 #noticias .image_stub {width: 100%; background-color: gray; color: white; text-align: center; height: 150px; margin-bottom: 10px;}
 
 #news {
